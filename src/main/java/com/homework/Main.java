@@ -1,4 +1,4 @@
-package Homework;
+package com.homework;
 
 public class Main {
 }
