@@ -1,4 +1,4 @@
 package com.homework;
 
-public class Main {
+public class TaskOne {
 }
