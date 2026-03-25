@@ -31,7 +31,7 @@ public class TaskOne {
         char char2 = 'b';
         char char3 = '\n';
         char char4 = '~';
-        char char5 = '\u00A9';
+        char char5 = '©';
         System.out.println("Characters:");
         System.out.println("Character 1: "+char1);
         System.out.println("Character 2: "+char2);
