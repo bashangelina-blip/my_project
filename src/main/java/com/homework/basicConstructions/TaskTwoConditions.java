@@ -1,4 +1,4 @@
-package com.homework;
+package com.homework.basicConstructions;
 
 public class TaskTwoConditions {
     public static void main(String[] args) {

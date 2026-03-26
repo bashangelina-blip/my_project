@@ -1,4 +1,4 @@
-package com.homework.tasks;
+package com.homework.basicConstructions.tasks;
 
 import java.util.Scanner;
 
