@@ -7,36 +7,33 @@ public class Main {
 
 
         Dog labrador = new Dog();
-        labrador.setPaws(4);
         labrador.setName("Charlie");
         labrador.setBreed("Labrador");
-        labrador.setSize("Average");
+        labrador.setSize(Size.AVERAGE);
         labrador.bite();
 
 
         Dog shepherd = new Dog();
-        shepherd.setPaws(4);
-        shepherd.setTail(1);
         shepherd.setBreed("Shepherd");
         shepherd.setName("Kali");
-        shepherd.setSize("Big");
+        shepherd.setSize(Size.BIG);
         shepherd.bite();
 
         Dog chihuahua = new Dog();
-        chihuahua.setPaws(4);
-        chihuahua.setTail(1);
         chihuahua.setBreed("Chihuhua");
         chihuahua.setName("Lola");
-        chihuahua.setSize("Small");
+        chihuahua.setSize(Size.SMALL);
         chihuahua.bite();
 
+        Size s = Size.valueOf("BIG");
+        Size[] values = Size.values();
+        for(int i=0; i < values.length; i++){
+            System.out.println(values[i]);
+        }
 
 
         System.out.println("Lab's name is " + labrador.getName());
         System.out.println("Shepherd's name is " + chihuahua.getName());
-        System.out.println("Lab's tail is " + labrador.getTail());
-
-
 
 
     }
