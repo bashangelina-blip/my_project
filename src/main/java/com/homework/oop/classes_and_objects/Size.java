@@ -1,4 +1,4 @@
-package com.homework.oop.ClassesAndObjects;
+package com.homework.oop.classes_and_objects;
 
 public enum Size {
     VERY_SMALL("XS"), SMALL("S"),

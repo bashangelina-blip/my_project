@@ -1,4 +1,4 @@
-package com.homework.OOP.ClassesAndObjects;
+package com.homework.oop.classes_and_objects;
 
 public class Dog {
 
