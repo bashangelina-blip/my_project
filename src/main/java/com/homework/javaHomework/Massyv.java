@@ -1,6 +1,7 @@
 package com.homework.javaHomework;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Massyv {
     public static void main(String[] args) {
@@ -19,6 +20,15 @@ public class Massyv {
 
         for(String teacher: teachers){
             System.out.println(teacher);
+        }
+
+        System.out.println();
+
+        ArrayList<String> cities = new ArrayList<>(List.of("Kyiv","Kherson","Lviv"));
+        cities.add("Konotop");
+        cities.remove(0);
+        for(String city:cities){
+            System.out.println(city);
         }
     }
 
