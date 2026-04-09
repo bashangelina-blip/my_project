@@ -1,21 +1,21 @@
 package com.homework.oop.interfacee;
 
-public class Rectangle implements Shapes {
+public class Square implements Shapes {
 
-    private double side;
+    private final double side;
 
-    public Rectangle(double side) {
+    public Square(double side) {
         this.side = side;
     }
 
 
     @Override
     public double calculateArea() {
-        return side;
+        return side * side;
     }
 
     @Override
     public double calculatePerimeter() {
-        return 0;
+        return side * 4;
     }
 }
