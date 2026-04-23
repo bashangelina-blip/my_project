@@ -20,13 +20,28 @@ public class LetsShopLoginTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://rahulshettyacademy.com/client/#/auth/login");
         Assert.assertEquals(driver.findElement(By.cssSelector(".title")).getText(),"Practice Website for Rahul Shetty Academy Students");
-        driver.findElement(By.xpath("//div/input[1]")).sendKeys("example@gmaol.com");
-        driver.findElement(By.id("userPassword")).sendKeys("S!yu12345678");
-        driver.findElement(By.xpath("//input[contains(@class,'btn')]")).click();
+        String error=getMessage(driver);
+        System.out.println(error);
+
+//        driver.findElement(By.xpath("//a[text() = 'Register']")).click();
+
+//        driver.findElement(By.xpath("//div/input[1]")).sendKeys("example@gmaol.com");
+//        driver.findElement(By.id("userPassword")).sendKeys("S!yu12345678");
+//        driver.findElement(By.xpath("//input[contains(@class,'btn')]")).click();
+//        Thread.sleep(2000);
+//        Assert.assertEquals(driver.findElement(By.tagName("h3")).getText(),"AUTOMATION");
+
+
+    }
+
+    public static String getMessage(WebDriver driver) throws InterruptedException {
+        driver.get("https://rahulshettyacademy.com/client/#/auth/login");
+        driver.findElement(By.xpath("//*[text()='Forgot password?']")).click();
         Thread.sleep(2000);
-        Assert.assertEquals(driver.findElement(By.tagName("h3")).getText(),"AUTOMATION");
-
-
+        driver.findElement(By.cssSelector(".btn-block")).click();
+        String errorText = driver.findElement(By.xpath("//div[text()='*Email is required']")).getText();
+        String []errorArray = errorText.split(" ");
+        return errorArray[2];
     }
 
 
